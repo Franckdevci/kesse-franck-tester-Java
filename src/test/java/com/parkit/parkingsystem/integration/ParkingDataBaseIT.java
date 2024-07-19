@@ -44,7 +44,7 @@ public class ParkingDataBaseIT {
     private final String vehicleRegNumber = "ABCDEF";
     private final long hourInMillis = 60 * 60 * 1000;
 
-    @Mock
+ 
     private static InputReaderUtil inputReaderUtil;
 
     @BeforeAll
@@ -106,9 +106,7 @@ public class ParkingDataBaseIT {
         //check that the fare generated and out time are populated correctly in the database
         assertNotNull(ticket.getOutTime());
         assertTrue(ticket.getPrice() >= 0);
-
     }
-    
     
     @Test
     public void testParkingLotExitRecurringUser(){
